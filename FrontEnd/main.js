@@ -1,5 +1,6 @@
 var GETdata;
 var POSTdata;
+const SERVER_URL = 'https://url-shortener-beta.herokuapp.com';
 
 function validURL(str) {
     var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
@@ -56,7 +57,7 @@ jQuery(".copy").on("click", function () {
 
 
 async function sendData() {
-    await fetch('http://localhost:5000/api/url/shorten', {
+    await fetch(`${SERVER_URL}/api/url/shorten`, {
         method: "POST",
         headers: {
             "Content-Type": 'application/json'
