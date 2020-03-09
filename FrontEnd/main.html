@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Generate Shortener Home Page</title>
+    <title>Generate Now</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
     <div>
         <ul>
             <li><a class="active" href="main.html">Home</a></li>
@@ -17,89 +18,43 @@
         </ul>
     </div>
 
+    <div class="limiter">
+        <div class="container-login">
+            <div class="wrap-login">
+                <form class="login-form">
 
-    <div class='row'>
-        <div class="col-sm-3"></div>
-        <div class="col-sm-3">
-            <section id="SECTION_1">
-                <h2 id="H2_2">
-                    Simple and fast URL shortener!
-                </h2>
-                <p id="P_3">
-                    ShortURL allows to reduce long links from <a href="https://www.facebook.com/" id="A_4"
-                        target="_blank">Facebook</a>,
-                    <a href="https://www.youtube.com/" id="A_5" target="_blank">YouTube</a>, <a
-                        href="https://www.twitter.com/" id="A_6" target="_blank">Twitter</a>, <a
-                        href="https://www.linkedin.com/" id="A_7" target="_blank">Linked In</a> and top sites
-                    on
-                    the
-                    Internet, just paste the long URL and click the Shorten URL button. Copy the shortened
-                    URL and share it on websites, chat and e-mail.
-                </p>
-                <h2 id="H2_9">
-                    Shorten and Share
-                </h2>
-                <p id="P_10">
-                    Your shortened URLs can be used in publications, advertisements, blogs, forums, e-mails, instant
-                    messages,
-                    and other locations.
-                </p>
-            </section>
+                    <span class="login-form-title">
+                        Generate Now!
+                    </span>
 
-            <div id="DIV_1">
-                <div id="DIV_2">
-                    <div id="DIV_3">
-                        <img src="https://www.shorturl.at/img/icon-like.png" id="IMG_4" alt='' />
+                    <div class="wrap-input ">
+                        <input class="input" type="url" name="Long_URL" placeholder="Enter long URL" required>
                     </div>
-                    <h3 id="H3_5">
-                        Easy
-                    </h3>
-                    <p id="P_6">
-                        ShortURL is easy and fast, enter the long link to get your shortened link
-                    </p>
-                </div>
-                <div id="DIV_7">
-                    <div id="DIV_8">
-                        <img src="https://www.shorturl.at/img/icon-url.png" id="IMG_9" alt='' />
+                    <span class='valid'>Wrong URL!</span>
+
+
+
+                    <div class="container-login-form-btn">
+                        <button type='submit' class="login-form-btn col-sm-6 generate">
+                            Generate
+                        </button>
                     </div>
-                    <h3 id="H3_10">
-                        Shortened
-                    </h3>
-                    <p id="P_11">
-                        Use any link, no matter what size, ShortURL always shortens
-                    </p>
-                </div>
-                <div id="DIV_12">
-                    <div id="DIV_13">
-                        <img src="https://www.shorturl.at/img/icon-responsive.png" id="IMG_14" alt='' />
+
+
+                    <div style="margin-top: 36px;">
+                        <input id='copyText' class="input" style="float: left; padding: 35px;" type="text"
+                            name="Short_URL" placeholder="Your short URL here" readonly>
+                        <button class="login-form-btn copy">
+                            Copy URL
+                        </button>
                     </div>
-                    <h3 id="H3_15">
-                        Devices
-                    </h3>
-                    <p id="P_16">
-                        Compatible with smartphones, tablets and desktop
-                    </p>
-                </div>
+
+
+                </form>
             </div>
-
-
-
-
-
-
         </div>
-        <div class="col-sm-3"></div>
     </div>
 
-    <div class='row'>
-        <div class="col-sm-3"></div>
-        <div class="container-login-form-btn col-sm-3">
-            <button class="login-form-btn bigger" onclick="location.href = 'index.html';">
-                <b>Get Started Now</b>
-            </button>
-        </div>
-        <div class="col-sm-3"></div>
-    </div>
 
     <!-- Site footer -->
     <footer class="site-footer">
@@ -144,6 +99,7 @@
             </div>
         </div>
     </footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="main.js"></script>
 
