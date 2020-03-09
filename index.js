@@ -13,7 +13,7 @@ app.use(cors());
 
 // Define Routes
 app.use('/', (req, res, next) => {
-    res.sendFile(path.join(__dirname + '/FrontEnd/'));
+    res.sendFile(path.join(__dirname + '/FrontEnd/main.html'));
 });
 
 app.use('/api/url', require('./routes/url'));
