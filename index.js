@@ -13,8 +13,9 @@ app.use(express.json({ extented: false }));// allows us to accept json data into
 app.use(cors());
 
 // Define Routes
-app.use('/', (req, res, next) => {
-    res.sendFile(path.join(__dirname + '/FrontEnd/main.html'));
+app.use(express.static(__dirname + '/FrontEnd'));
+app.get('/', (req, res, next) => {
+    res.sendFile(path.join(__dirname + 'main.html'));
 });
 
 app.use('/api/url', require('./routes/url'));
