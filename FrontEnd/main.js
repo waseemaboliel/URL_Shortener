@@ -65,7 +65,7 @@ async function sendData() {
         body: JSON.stringify(POSTdata)
     }).then((resp) => resp.json())
         .then(function (response) {
-            GETdata = response.shortUrl;
+            GETdata = SERVER_URL + "/" + response.urlCode;
             return response;
         });
 

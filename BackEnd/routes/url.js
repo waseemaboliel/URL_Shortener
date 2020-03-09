@@ -48,6 +48,7 @@ router.post('/shorten', async (req, res) => {// address and callback function
                 await url.save();// saving the url to database
                 res.json({
                     longUrl: url.longUrl,
+                    urlCode,
                     shortUrl: url.shortUrl
                 });
             }
