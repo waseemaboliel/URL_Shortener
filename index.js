@@ -15,7 +15,7 @@ app.use(cors());
 // Define Routes
 app.use(express.static(__dirname + '/FrontEnd'));
 app.get('/', (req, res, next) => {
-    res.sendFile(path.join(__dirname + 'main.html'));
+    res.sendFile(path.join(__dirname + 'index.html'));
 });
 
 app.use('/api/url', require('./routes/url'));
