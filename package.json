@@ -1,0 +1,12 @@
+{
+  "name": "shortener",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node index --prefix BackEnd/",
+    "heroku-postbuild": "npm i --prefix BackEnd/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

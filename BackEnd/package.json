@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index",
     "dev": "nodemon index",
-    "heroku-postbuild": "echo Skip build on Heroku"
+    "heroku-postbuild": "npm i"
   },
   "keywords": [],
   "author": "",
