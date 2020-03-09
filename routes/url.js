@@ -34,6 +34,7 @@ router.post('/shorten', async (req, res) => {// address and callback function
             if (url) {
                 res.json({
                     longUrl: url.longUrl,
+                    urlCode,
                     shortUrl: url.shortUrl
                 });
             } else {
