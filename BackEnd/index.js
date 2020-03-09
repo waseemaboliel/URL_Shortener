@@ -12,9 +12,13 @@ app.use(express.json({ extented: false }));// allows us to accept json data into
 app.use(cors());
 
 // Define Routes
+app.use('/', (req, res, next) => {
+    res.sendFile(path.join(__dirname + '/FrontEnd/'));
+});
+
+app.use('/api/url', require('./routes/url'));
 
 app.use('/', require('./routes/index'));
-app.use('/api/url', require('./routes/url'));
 
 const PORT = process.env.PORT || 5000;
 
