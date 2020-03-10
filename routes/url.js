@@ -11,11 +11,7 @@ const Url = require('../modules/Url');
 
 router.post('/shorten', async (req, res) => {// address and callback function
     const { longUrl } = req.body;//sent from the client (frontEnd)
-    const baseUrl = config.get('baseURl');
-    //check base url
-    if (!validUrl.isUri(baseUrl)) {
-        return res.status(401).json('Invalid base url');
-    }
+
 
     //Check long url
     if (validUrl.isUri(longUrl)) {
@@ -34,14 +30,11 @@ router.post('/shorten', async (req, res) => {// address and callback function
             if (url) {
                 res.json({
                     longUrl: url.longUrl,
-                    code: url.urlCode,
-                    shortUrl: url.shortUrl
+                    code: url.urlCode
                 });
             } else {
-                const shortUrl = baseUrl + '/' + urlCode;
                 url = new Url({
                     longUrl,
-                    shortUrl,
                     urlCode,
                     date: new Date()
                 });
@@ -49,8 +42,7 @@ router.post('/shorten', async (req, res) => {// address and callback function
                 await url.save();// saving the url to database
                 res.json({
                     longUrl: url.longUrl,
-                    code: url.urlCode,
-                    shortUrl: url.shortUrl
+                    code: url.urlCode
                 });
             }
         } catch (error) {
