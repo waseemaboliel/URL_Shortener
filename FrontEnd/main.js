@@ -1,6 +1,6 @@
 var GETdata;
 var POSTdata;
-const SERVER_URL = 'https://url-shortener-beta.herokuapp.com';
+const SERVER_URL = 'https://url-shortener-beta-woad.vercel.app';
 
 function validURL(str) {
     var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
