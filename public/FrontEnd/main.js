@@ -1,7 +1,6 @@
 var GETdata;
 var POSTdata;
 const SERVER_URL = 'https://utl-shortener.web.app/index.html:8080';
-
 function validURL(str) {
     var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
         '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name

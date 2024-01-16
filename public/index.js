@@ -3,7 +3,15 @@ const connectDB = require('./config/db');
 const app = express();
 const cors = require('cors');
 const path = require('path');
+const admin = require('firebase-admin');
+const serviceAccount = require('./path/to/your/serviceAccountKey.json'); // Download this from Firebase Console
 
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: 'https://your-project-id.firebaseio.com', // Replace with your database URL
+});
+
+const db = admin.firestore();
 
 
 
