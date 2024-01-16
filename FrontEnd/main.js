@@ -1,6 +1,6 @@
 var GETdata;
 var POSTdata;
-const SERVER_URL = 'https://utl-shortener.web.app/index.html:8080';
+const SERVER_URL = 'http://localhost:8080';
 
 function validURL(str) {
     var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol

@@ -6,7 +6,6 @@ const path = require('path');
 
 
 
-
 //Connect to database
 connectDB();
 
